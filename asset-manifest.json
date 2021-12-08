@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/perx-internet-shop/static/css/main.daa728dc.chunk.css",
+    "main.js": "/perx-internet-shop/static/js/main.d8dc9a87.chunk.js",
+    "main.js.map": "/perx-internet-shop/static/js/main.d8dc9a87.chunk.js.map",
+    "runtime-main.js": "/perx-internet-shop/static/js/runtime-main.18423c16.js",
+    "runtime-main.js.map": "/perx-internet-shop/static/js/runtime-main.18423c16.js.map",
+    "static/js/2.3e924046.chunk.js": "/perx-internet-shop/static/js/2.3e924046.chunk.js",
+    "static/js/2.3e924046.chunk.js.map": "/perx-internet-shop/static/js/2.3e924046.chunk.js.map",
+    "index.html": "/perx-internet-shop/index.html",
+    "static/css/main.daa728dc.chunk.css.map": "/perx-internet-shop/static/css/main.daa728dc.chunk.css.map",
+    "static/js/2.3e924046.chunk.js.LICENSE.txt": "/perx-internet-shop/static/js/2.3e924046.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.18423c16.js",
+    "static/js/2.3e924046.chunk.js",
+    "static/css/main.daa728dc.chunk.css",
+    "static/js/main.d8dc9a87.chunk.js"
+  ]
+}
