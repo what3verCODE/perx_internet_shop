@@ -19,10 +19,9 @@ function start(initialValues?: InitialValues) {
     const dealers = initialValues ? initialValues.dealers : [];
 
     running = true;
+    console.log("Application starting with initial values...", initialValues);
     ReactDOM.render(
-        <React.StrictMode>
-            <Application dealers={dealers} />
-        </React.StrictMode>,
+        <Application dealers={dealers} />,
         document.getElementById('root')
     );
 }

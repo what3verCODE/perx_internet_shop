@@ -17,7 +17,7 @@ export const Application: React.FC<ApplicationProps> = ({dealers}) => {
     return (
         <Provider store={store}>
             <PersistGate persistor={persistor}>
-                <Router>
+                <Router basename="/perx-internet-shop">
                     <Routes>
                         <Route path="/" element={<HomePage dealers={dealers} />}/>
                         <Route path="/cart" element={<CartPage />}/>
