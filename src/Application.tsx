@@ -7,6 +7,7 @@ import {
     Routes,
     Route
 } from "react-router-dom";
+import {HomePage} from "./pages/home";
 
 export const Application: React.FC = () => {
     return (
@@ -14,7 +15,7 @@ export const Application: React.FC = () => {
             <PersistGate persistor={persistor}>
                 <Router>
                     <Routes>
-                        <Route path="/" element={<div>Home</div>}/>
+                        <Route path="/" element={<HomePage />}/>
                         <Route path="/cart" element={<div>Cart</div>}/>
                     </Routes>
                 </Router>
