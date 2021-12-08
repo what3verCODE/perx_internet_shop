@@ -1,17 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import {Application} from './Application';
+import './index.scss';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+let running = false;
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+function start() {
+    if (running) {
+        console.log("Application already running...")
+        return;
+    }
+
+    running = true;
+    ReactDOM.render(
+        <React.StrictMode>
+            <Application />
+        </React.StrictMode>,
+        document.getElementById('root')
+    );
+}
+
+start();
