@@ -3,7 +3,7 @@ import {IProduct} from "../../models/product";
 import {withPrefix} from "../utils";
 import {RootState} from "../types";
 
-interface CartItem {
+export interface CartItem {
     product: IProduct;
     count: number;
 }

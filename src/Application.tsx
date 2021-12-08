@@ -7,7 +7,7 @@ import {
     Routes,
     Route
 } from "react-router-dom";
-import {HomePage} from "./pages/home";
+import {HomePage, CartPage} from "./pages";
 
 export const Application: React.FC = () => {
     return (
@@ -16,7 +16,7 @@ export const Application: React.FC = () => {
                 <Router>
                     <Routes>
                         <Route path="/" element={<HomePage />}/>
-                        <Route path="/cart" element={<div>Cart</div>}/>
+                        <Route path="/cart" element={<CartPage />}/>
                     </Routes>
                 </Router>
             </PersistGate>
