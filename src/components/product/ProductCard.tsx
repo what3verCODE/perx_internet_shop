@@ -4,25 +4,33 @@ import {Card, CardBody, CardFooter} from "../card";
 import {Button} from "../button/Button";
 import {baseURL} from "../../utils/constants";
 import styles from "./ProductCard.module.scss";
+import {useAppDispatch} from "../../core/redux";
+import {addToCart} from "../../core/redux/reducers/cart";
+import {getImagePath} from "../../utils/image";
 
 interface ProductCardProps {
     product: IProduct
 }
 
-const imgSrc = `${baseURL}/logo/node.png`
+export const ProductCard: React.FC<ProductCardProps> = ({product}) => {
+    const {name, price, image} = product;
 
-export const ProductCard: React.FC<ProductCardProps> = () => {
+    const dispatch = useAppDispatch();
+    const handleAddToCart = React.useCallback(() => {
+        dispatch(addToCart(product));
+    }, [product]);
+
     return (
         <Card className={styles.productCard}>
-            <img className={styles.productImage} src={imgSrc} alt="Node Logo"/>
+            <img className={styles.productImage} src={getImagePath(image)} alt="Node Logo"/>
             <CardBody>
                 <div className={styles.productInfo}>
-                    <h4>Name</h4>
-                    <h4>$1.99</h4>
+                    <h4>{name}</h4>
+                    <h4>${price}</h4>
                 </div>
             </CardBody>
             <CardFooter>
-                <Button wide>Add to cart</Button>
+                <Button wide onClick={handleAddToCart}>Add to cart</Button>
             </CardFooter>
         </Card>
     )

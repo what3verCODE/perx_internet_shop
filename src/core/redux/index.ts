@@ -14,3 +14,5 @@ export const store = configureStore({
 })
 
 export const persistor = persistStore(store);
+
+export {useAppDispatch, useAppSelector} from "./utils";

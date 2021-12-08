@@ -1,0 +1,15 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 20px;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.navbarLogo {
+  cursor: pointer;
+  color: black;
+}
