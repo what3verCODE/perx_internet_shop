@@ -9,13 +9,17 @@ import {
 } from "react-router-dom";
 import {HomePage, CartPage} from "./pages";
 
-export const Application: React.FC = () => {
+interface ApplicationProps {
+    dealers: string[];
+}
+
+export const Application: React.FC<ApplicationProps> = ({dealers}) => {
     return (
         <Provider store={store}>
             <PersistGate persistor={persistor}>
                 <Router>
                     <Routes>
-                        <Route path="/" element={<HomePage />}/>
+                        <Route path="/" element={<HomePage dealers={dealers} />}/>
                         <Route path="/cart" element={<CartPage />}/>
                     </Routes>
                 </Router>

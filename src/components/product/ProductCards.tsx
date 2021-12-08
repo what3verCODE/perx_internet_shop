@@ -5,12 +5,16 @@ import {Container} from "../container";
 import {useAppDispatch, useAppSelector} from "../../core/redux";
 import {fetchProducts, selectProductsData} from "../../core/redux/reducers/products";
 
-export const ProductCards: React.FC = () => {
+interface ProductCardsProps {
+    dealers: string[];
+}
+
+export const ProductCards: React.FC<ProductCardsProps> = ({dealers}) => {
     const dispatch = useAppDispatch();
     const products = useAppSelector(selectProductsData);
 
     React.useEffect(() => {
-        dispatch(fetchProducts([]));
+        dispatch(fetchProducts(dealers));
     }, [])
 
     return (

@@ -2,10 +2,14 @@ import React from "react";
 import {MainLayout} from "../layouts";
 import {ProductCards} from "../components/product/ProductCards";
 
-export const HomePage: React.FC = () => {
+interface HomePageProps {
+    dealers: string[];
+}
+
+export const HomePage: React.FC<HomePageProps> = ({dealers}) => {
     return (
         <MainLayout>
-            <ProductCards />
+            <ProductCards dealers={dealers} />
         </MainLayout>
     )
 }

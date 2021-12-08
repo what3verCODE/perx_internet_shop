@@ -1,7 +1,6 @@
 import React from "react";
-import {IProduct} from "../../core/models/product";
 import {Button} from "../button/Button";
-import {useAppDispatch} from "../../core/redux/utils";
+import {useAppDispatch} from "../../core/redux";
 import {CartItem, removeFromCart} from "../../core/redux/reducers/cart";
 import styles from "./CartGrid.module.scss";
 
