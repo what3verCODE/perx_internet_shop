@@ -1,10 +1,5 @@
 .productCard {
   margin-bottom: 50px;
-  margin-right: 35px;
-
-  &:nth-child(4n+4) {
-    margin-right: 0;
-  }
 }
 
 .productImage {
@@ -25,5 +20,40 @@
     font-size: 1.3rem;
     line-height: 1.3;
     letter-spacing: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .productCard {
+    margin: 0 15px 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .productImage {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media (min-width: 768px) {
+  .productCard {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .productCard {
+    margin-right: 35px;
+  }
+
+  .productCard:nth-child(3n+3) {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 1400px) {
+  .productCard:nth-child(4n+4) {
+    margin-right: 0;
   }
 }

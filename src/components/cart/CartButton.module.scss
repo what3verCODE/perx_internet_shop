@@ -23,3 +23,9 @@
   height: 1.5rem;
   margin: 0 10px;
 }
+
+@media (max-width: 576px) {
+  .cartButton {
+    width: 100%;
+  }
+}
